@@ -18,6 +18,26 @@ super + p
 super + alt + l
   betterlockscreen -l
 
+# Increase volume
+super + {Up, XF86AudioRaiseVolume}
+    pactl set-sink-volume @DEFAULT_SINK@ +5% && dunstify -r 2593 -u low "Volume: $(pamixer --get-volume)%"
+
+# Decrease volume
+super + {Down, XF86AudioLowerVolume}
+    pactl set-sink-volume @DEFAULT_SINK@ -5% && dunstify -r 2593 -u low "Volume: $(pamixer --get-volume)%"
+
+# Mute/unmute volume
+super + {m, XF86AudioMute}
+    pactl set-sink-mute @DEFAULT_SINK@ toggle && dunstify -r 2593 -u low "Muted: $(pamixer --get-mute)"
+
+# Increase brightness with notification showing clean percentage
+super + {Right, XF86MonBrightnessUp}
+    brightnessctl set +5% && dunstify -r 2594 -u low "Brightness: $(( $(brightnessctl get) * 100 / $(brightnessctl max) ))%"
+
+# Decrease brightness with notification showing clean percentage
+super + {Left, XF86MonBrightnessDown}
+    brightnessctl set 5%- && dunstify -r 2594 -u low "Brightness: $(( $(brightnessctl get) * 100 / $(brightnessctl max) ))%"
+
 # make sxhkd reload its configuration files:
 super + Escape
 	pkill -USR1 -x sxhkd
