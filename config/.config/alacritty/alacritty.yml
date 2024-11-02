@@ -1,0 +1,28 @@
+# Tokyo Night Theme for Alacritty
+colors:
+  primary:
+    background: '#1a1b26'
+    foreground: '#a9b1d6'
+  normal:
+    black:   '#414868'
+    red:     '#f7768e'
+    green:   '#73daca'
+    yellow:  '#e0af68'
+    blue:    '#7aa2f7'
+    magenta: '#bb9af7'
+    cyan:    '#7dcfff'
+    white:   '#c0caf5'
+  bright:
+    black:   '#565f89' # Bright Black (Comments)
+    red:     '#f7768e' # Use same color as normal red
+    green:   '#73daca' # Use same color as normal green
+    yellow:  '#e0af68' # Use same color as normal yellow
+    blue:    '#7aa2f7' # Use same color as normal blue
+    magenta: '#bb9af7' # Use same color as normal magenta
+    cyan:    '#7dcfff' # Use same color as normal cyan
+    white:   '#c0caf5' # Use same color as normal white
+
+font:
+  normal:
+    family: ''
+    size: 

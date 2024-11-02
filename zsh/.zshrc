@@ -154,3 +154,18 @@ eval "$(atuin init zsh)"
 
 # rofi menu
 export PATH=$HOME/.config/rofi/scripts:$PATH
+
+# java
+export JAVA_HOME=~/jdk1.8.0_111
+export PATH=$JAVA_HOME/bin:$PATH
+
+# netbeans
+export PATH=~/netbeans-8.2/bin:$PATH
+
+# alias
+alias mariadb-start="systemctl start mariadb.service"
+alias mariadb-stop="systemctl stop mariadb.service"
+
+alias stow-init='cd ~/.dotfiles; for dir in config oh-my-zsh tmux zsh; do sudo stow $dir; done'
+alias stow-refresh='cd ~/.dotfiles; for dir in config oh-my-zsh tmux zsh; do sudo stow -R $dir; done'
+alias stow-delete='cd ~/.dotfiles; for dir in config oh-my-zsh tmux zsh; do sudo stow -D $dir; done'
