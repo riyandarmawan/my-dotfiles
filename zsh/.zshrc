@@ -166,6 +166,6 @@ export PATH=~/netbeans-8.2/bin:$PATH
 alias mariadb-start="systemctl start mariadb.service"
 alias mariadb-stop="systemctl stop mariadb.service"
 
-alias stow-init='cd ~/.dotfiles; for dir in config oh-my-zsh tmux zsh; do sudo stow $dir; done'
-alias stow-refresh='cd ~/.dotfiles; for dir in config oh-my-zsh tmux zsh; do sudo stow -R $dir; done'
-alias stow-delete='cd ~/.dotfiles; for dir in config oh-my-zsh tmux zsh; do sudo stow -D $dir; done'
+# alias stow-init='cd ~/.dotfiles; for dir in config oh-my-zsh tmux zsh; do sudo stow $dir; done'
+# alias stow-refresh='cd ~/.dotfiles; for dir in config oh-my-zsh tmux zsh; do sudo stow -R $dir; done'
+# alias stow-delete='cd ~/.dotfiles; for dir in config oh-my-zsh tmux zsh; do sudo stow -D $dir; done'
