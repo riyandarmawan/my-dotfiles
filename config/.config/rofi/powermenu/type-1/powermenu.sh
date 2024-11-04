@@ -67,7 +67,7 @@ run_cmd() {
       systemctl reboot
     elif [[ $1 == '--suspend' ]]; then
       mpc -q pause
-      pactl set-sink-mute @DEFAULT_SINK@ toggle
+      # pactl set-sink-mute @DEFAULT_SINK@ toggle
       betterlockscreen -l &
       sleep 0.2
       systemctl suspend
